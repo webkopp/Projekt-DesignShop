@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-head: rgba(50, 58, 69, 1);
+    --color-artikel-preis: rgba(0, 0, 0, 1);
+    --color-marke: rgba(132, 132, 132, 1)
+}
+
+html {
+    font-family: 'Karla';
+    font-size: 1em;
+}
+
+
+/* header */
+
+header nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center
+}
+
+header nav ul {
+    display: grid;
+    justify-content: end;
+    grid-template-columns: 20vw 5vw 5vw;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+/* main */
+
+.container {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "coverfoto coverfoto coverfoto"
+        "foto1 foto2 foto3"
+        "foto4 foto5 foto6";
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.coverfoto {
+    grid-area: coverfoto;
+}
+
+main div img {
+    width: 100%;
+}
+
+/* hover */
+main div img a:hover {
+    background-color: rgba(0, 0, 0, 1);
+    z-index: -1;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+}
+
+main h2 {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--color-artikel-preis);
+}
+
+main h3 {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--color-marke);
+}
+
+main p {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: right;
+    color: var(--color-artikel-preis);
+}
+
+.marke {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+
+/* footer */
+
+footer nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding: 3em 0;
+}
+
+footer nav ul {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 70vw 20% 20% 20%;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: var(--color-artikel-preis);
+}
+
+footer p {
+    color: #848484;
+    font-size: 0.7em;
+}
+
+
+
+
